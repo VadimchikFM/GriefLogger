@@ -62,3 +62,10 @@ jobs:
             neoforge/build/libs/*.jar
           name: ${{ steps.gradle_version.outputs.VERSION_NAME }}
           tag: ${{ steps.gradle_version.outputs.VERSION_NAME }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: GriefLogger
+          path: |
+            fabric/build/libs/*.jar
+            neoforge/build/libs/*.jar
