@@ -12,7 +12,7 @@ public class InspectCommand implements ICommand {
     @Override
     public LiteralArgumentBuilder<CommandSourceStack> getCommand() {
         return Commands.literal("inspect")
-                .requires(source -> source.hasPermission(2))
+                .requires(source -> source.hasPermission(0))
                 .executes(context -> inspect(context.getSource()));
     }
 
